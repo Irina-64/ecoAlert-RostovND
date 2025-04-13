@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>EcoAlert — карта проблем</title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+</head>
+
+<body>
+	<h1>🌍 EcoAlert: Карта экологических проблем</h1>
+	<div class="controls">
+		<label for="filter">Фильтр по типу:</label>
+		<select id="filter">
+			<option>Все</option>
+			<option>Свалка</option>
+			<option>Загрязнение</option>
+			<option>Вырубка</option>
+		</select>
+	</div>
+
+	<div class="form-container">
+		<form id="report-form">
+			<h3>📌 Сообщить о проблеме</h3>
+			<input type="text" id="type" placeholder="Тип проблемы" required />
+			<textarea id="description" placeholder="Описание" required></textarea>
+			<input type="number" id="lat" placeholder="Широта" required />
+			<input type="number" id="lng" placeholder="Долгота" required />
+			<button type="submit">Добавить</button>
+		</form>
+	</div>
+
+	<div id="map"></div>
+
+	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>
